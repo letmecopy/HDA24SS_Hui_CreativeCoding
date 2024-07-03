@@ -9,6 +9,7 @@
 
 
 
+
 class Vocab {
   String word;
   String correctAnswer;
@@ -26,7 +27,8 @@ class Vocab {
 Vocab[] vocabList = {
   new Vocab("Rot", "red", "blue"),
   new Vocab("Buch", "book", "pen"),
-  new Vocab("Informatik", "CS", "Art")
+  new Vocab("Informatik", "CS", "Art"),
+  new Vocab("Milch", "milk", "juice")
 };
 
 
