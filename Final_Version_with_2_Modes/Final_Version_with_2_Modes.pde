@@ -233,6 +233,12 @@ void displayCoinMessage() {
 }
 
 void runGameMode() {
+  //draw white rect to cover coin
+  fill(255);
+  noStroke();
+  rect(0,0,200,80);
+  
+  
   // draw the player image
   image(playerImg, playerX, playerY, 56, 56);//original position of cat
 
@@ -262,9 +268,9 @@ void runGameMode() {
   if (!gameOver && !gameWon) {
     if (keyPressed && key == CODED) {
       if (keyCode == LEFT) {
-        playerSpeedX = max(playerSpeedX - 1, -5); // 最小速度限制为 -5
+        playerSpeedX = max(playerSpeedX - 1, -5); 
       } else if (keyCode == RIGHT) {
-        playerSpeedX = min(playerSpeedX + 1, 5); // 最大速度限制为 5
+        playerSpeedX = min(playerSpeedX + 1, 5); 
       }
     }
   }
