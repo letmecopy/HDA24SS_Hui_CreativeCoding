@@ -1,5 +1,10 @@
+//Game Mode
+
+
 PImage playerImg; 
 PImage img;
+//PImage obstacleImg;
+
 float groundY = 600;
 float square = 50;
 float playerX = 0;
@@ -28,13 +33,18 @@ boolean gameOver = false;
 boolean jumping = false;
 boolean gameWon = false;
 
+
+
 void setup() {
   size(1000, 800);
   textSize(50);
   textAlign(LEFT);
   img = loadImage("Brezel.jpg");
   playerImg = loadImage("cat.png");
+  //obstacleImg = loadImage("obstacle.png");
 }
+
+
 
 void draw() {
   background(255);
@@ -46,12 +56,13 @@ void draw() {
   fill(0, 139, 139);
   rect(0, 600, 1000, 200);
 
-  // apply gravity
+  //gravity
   if (!gameOver && !gameWon) {
     playerSpeedY += gravity;
   }
 
-  // move the player
+  // Player move 
+  //horizontal: ->  -<  vertical: gravity
   playerX += playerSpeedX;
   playerY += playerSpeedY;
 
