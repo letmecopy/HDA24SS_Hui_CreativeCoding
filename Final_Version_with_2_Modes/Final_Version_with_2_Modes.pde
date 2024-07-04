@@ -39,7 +39,9 @@ Vocab[] vocabList = {
   new Vocab("das Buch", "book", "pen"),
   new Vocab("die Informatik", "CS", "Art"),
   new Vocab("die Milch", "milk", "juice"),
-  new Vocab("Warum", "why", "what")
+  new Vocab("Warum", "why", "what"),
+  new Vocab("etikettieren","to label","to classify"),
+  new Vocab("sprichwörtlich","proverbial","speechless")
 };
 
 
@@ -164,7 +166,7 @@ void displayWordAndButtons() {
 void drawButton(String label, int x, int y) {
   stroke(0);
   fill(255);
-  rect(x, y, 150, 60);
+  rect(x, y, 250, 60);
   fill(0);
   text(label, x + 40, y + 40);
 }
@@ -338,9 +340,9 @@ void keyPressed() {
       }
     } else if (key == CODED) {
       if (keyCode == LEFT) {
-        playerSpeedX = max(playerSpeedX - 1, -5); // 最小速度限制为 -5
+        playerSpeedX = max(playerSpeedX - 1, -5); 
       } else if (keyCode == RIGHT) {
-        playerSpeedX = min(playerSpeedX + 1, 5); // 最大速度限制为 5
+        playerSpeedX = min(playerSpeedX + 1, 5); 
       }
     }
   }
